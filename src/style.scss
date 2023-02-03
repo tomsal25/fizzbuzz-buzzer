@@ -1,0 +1,128 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  // FIXME: only Safari on iOS>=13
+  touch-action: pan-x pan-y;
+  user-select: none;
+}
+
+body {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  margin: auto;
+}
+
+#app {
+  width: auto;
+  background-color: #93aad4;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  width: auto;
+  background: #888;
+  text-align: center;
+  font-size: 18px;
+}
+
+#footer {
+  width: auto;
+  background: #ddd;
+  display: flex;
+  flex-direction: row;
+  column-gap: 2%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn {
+  padding: 0.25em;
+  color: #fff;
+  background-color: #007bff;
+  font-size: Min(32px, 5vw, 5vh);
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  border-color: #007bff;
+
+  // appearance: none;
+
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:disabled {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    opacity: 0.65;
+  }
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+  &:not(:disabled):active {
+    color: #fff;
+    background-color: #0062cc;
+    border-color: #005cbf;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.5);
+  }
+}
+
+#wrapper {
+  width: auto;
+  flex: 1;
+}
+
+#main {
+  width: auto;
+  height: 100%;
+  padding: 1% 3%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+
+  scrollbar-width: none; // Firefox
+  &::-webkit-scrollbar {
+    display: none; // Google Chrome
+  }
+}
+
+#main .message {
+  width: fit-content;
+  height: fit-content;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: solid;
+  &.me {
+    align-self: flex-end;
+    row-gap: 10px;
+    background-color: #b77;
+  }
+  &.enemy {
+    row-gap: 10px;
+    align-self: flex-start;
+    background-color: #77b;
+  }
+  &.system {
+    align-self: center;
+    background-color: #bb7;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #app {
+    width: 1000px;
+  }
+
+  #footer > button {
+    font-size: Min(24px, 5vw, 5vh);
+  }
+}

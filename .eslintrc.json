@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/strict",
+    "prettier"
+  ],
+  "ignorePatterns": ["postcss.config.js", "webpack.config.js"],
+  "parserOptions": { "project": "./tsconfig.json" },
+  "rules": {
+    "max-classes-per-file": ["warn", { "ignoreExpressions": true, "max": 1 }]
+  }
+}
