@@ -2,10 +2,6 @@
 
 Press the correct button to defeat the computer.
 
-# TODO
+## For Dev
 
-- [x] auto scroll
-- [ ] multi player
-- [ ] select level
-  - [ ] response speed
-  - [ ] enemy's accuracy
+You can modify parameters in [InitialParam.ts](./src/parameter/InitialParam.ts).
