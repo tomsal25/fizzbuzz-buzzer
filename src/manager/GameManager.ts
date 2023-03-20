@@ -14,7 +14,7 @@ const footer = Footer.getInstance();
 const { timeLimit, gameLevel, enemyAmount } = setting;
 
 // TODO: multi player
-const player = new Player(1, "me");
+const player = new Player(1, "player");
 // TODO: amount of enemy
 const enemyList = [];
 for (let i = 0; i < enemyAmount; i++) {

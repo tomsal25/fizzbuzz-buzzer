@@ -9,7 +9,7 @@ export class Player {
   }
 
   public makeMessage(message: string) {
-    const { node } = new HtmlComponent("div", "", ["message", this.playerName]);
+    const { node } = new HtmlComponent("div", "", ["message", "me"]);
     node.textContent = `${this.playerName}: ${message}`;
     return node;
   }
