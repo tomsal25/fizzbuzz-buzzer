@@ -2,6 +2,7 @@ import { enemyProp, setting } from "../parameter";
 import { Choice } from "../types/FizzBuzz";
 import { Enemy, Player, System } from "./Characters";
 import { Footer, Header, Main, Wrapper } from "./components";
+import { drawer, drawerButton } from "./components/Drawer";
 import { State } from "./state/State";
 
 // components
@@ -121,4 +122,10 @@ footer.retryButton.node.addEventListener("click", init);
 
 // pack components
 export const fragment = new DocumentFragment();
-fragment.append(header.node, wrapper.node, footer.node);
+fragment.append(
+  drawerButton.node,
+  drawer.node,
+  header.node,
+  wrapper.node,
+  footer.node
+);
