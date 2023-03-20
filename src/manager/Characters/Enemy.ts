@@ -14,7 +14,7 @@ export class Enemy {
 
   public constructor(id: number, private settings: EnemyProp) {
     this.playerID = `enemy-${id}`;
-    this._playerName = `Enemy-${id}`;
+    this._playerName = `敵-${id}`;
   }
 
   public get playerName() {

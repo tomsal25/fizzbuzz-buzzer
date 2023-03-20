@@ -14,7 +14,7 @@ const footer = Footer.getInstance();
 const { timeLimit, gameLevel, enemyAmount } = setting;
 
 // TODO: multi player
-const player = new Player(1, "player");
+const player = new Player(1, "プレイヤー");
 // TODO: amount of enemy
 const enemyList = [];
 for (let i = 0; i < enemyAmount; i++) {
@@ -115,6 +115,15 @@ export const setup = () => {
       loop({ playerID, number }, playerName);
     });
   }
+  pushMessage(
+    system.makeMessage(
+      `以下のタイミングで対応するボタンを押してください。
+       ・3の倍数→Fizz
+       ・5の倍数→Buzz
+       ・15の倍数→FizzBuzz
+       ・それ以外→数字のボタン`
+    )
+  );
 };
 
 // attach setup function to retry button
