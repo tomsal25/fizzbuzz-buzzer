@@ -9,6 +9,7 @@
     "watch": "webpack serve --no-open"
   },
   "license": "MIT",
+  "homepage": "https://tomsal25.github.io/fizzbuzz-buzzer/",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",

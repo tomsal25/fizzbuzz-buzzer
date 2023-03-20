@@ -1,5 +1,9 @@
 # FizzBuzz Buzzer Game
 
+## Try it
+
+https://tomsal25.github.io/fizzbuzz-buzzer/
+
 ## How To Play
 
 Press the correct button to defeat the computer.
